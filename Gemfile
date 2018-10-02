@@ -12,7 +12,7 @@ gem 'pg', '~> 0.19.0'
 gem 'scenic', '~> 1.4.0'
 
 # use mysql as the db
-gem 'mysql2', '~> 0.4.10'
+# gem 'mysql2', '~> 0.4.10'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'

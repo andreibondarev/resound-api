@@ -120,7 +120,6 @@ GEM
     mono_logger (1.1.0)
     multi_json (1.13.1)
     mustermann (1.0.3)
-    mysql2 (0.4.10)
     nio4r (2.3.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
@@ -257,7 +256,6 @@ DEPENDENCIES
   jwt (~> 1.5.6)
   kaminari (~> 0.14.1)
   listen (~> 3.0.5)
-  mysql2 (~> 0.4.10)
   pg (~> 0.19.0)
   puma (~> 3.0)
   rack-cors
