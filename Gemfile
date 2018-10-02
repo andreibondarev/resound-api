@@ -41,7 +41,7 @@ gem 'kaminari', '~> 0.14.1'
 gem 'shrine', '~> 2.11.0'
 
 # Use ~> 2.0 because after 2.0, the constant is named AWS, not Aws. Shrine wants Aws.
-gem 'aws-sdk', '~> 2.1'
+gem 'aws-sdk'
 gem 'streamio-ffmpeg', '~> 3.0'
 gem 'honeybadger', '~> 3.1'
 gem 'shrine-ftp'
