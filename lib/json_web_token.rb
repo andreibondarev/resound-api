@@ -1,7 +1,7 @@
 class JsonWebToken
   JWKS_CACHE_KEY = 'jwks_hash_keys'
 
-  AUTH0_DOMAIN = "https://#{Rails.application.secrets.auth0_domain}/"
+  AUTH0_DOMAIN = "https://#{ENV['AUTH0_DOMAIN']}/"
 
   def self.verify(token)
     JWT.decode(token, nil,
