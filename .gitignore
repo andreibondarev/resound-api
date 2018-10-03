@@ -27,7 +27,7 @@
 !.elasticbeanstalk/*.global.yml
 
 # Ignore secrets
-/config/secrets.yml
+#/config/secrets.yml
 
 public/
 /.yardoc/*
