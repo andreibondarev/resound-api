@@ -6,24 +6,12 @@ Shrine.plugin :activerecord
 Shrine.plugin :logging, logger: Rails.logger
 Shrine.plugin :validation_helpers
 
-puts('------------RAILS SECRETS------------')
-puts(Rails.application.secrets.aws_secret_access_key)
-puts(Rails.application.secrets.aws_region)
-puts(Rails.application.secrets.aws_bucket)
-puts(Rails.application.secrets.auth0_domain)
-puts('------------ENV VARS------------')
-puts(ENV['AWS_ACCESS_KEY_ID'])
-puts(ENV['AWS_SECRET_ACCESS_KEY'])
-puts(ENV['AWS_REGION'])
-puts(ENV['AWS_BUCKET'])
-puts('--------------------------------')
-
 storage_location = if Rails.env.production? || ENV['UPLOAD_TO_S3']
                      shrine_options = {
-                         access_key_id: ENV['AWS_ACCESS_KEY_ID'],
-                         secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
-                         region: ENV['AWS_REGION'],
-                         bucket: ENV['AWS_BUCKET'],
+                         access_key_id: Rails.application.secrets.aws_access_key_id,
+                         secret_access_key: Rails.application.secrets.aws_secret_access_key,
+                         region: Rails.application.secrets.aws_region,
+                         bucket: Rails.application.secrets.aws_bucket,
                          upload_options: { acl: 'public-read' },
                      }
                      if Rails.application.secrets.s3_signature_version
